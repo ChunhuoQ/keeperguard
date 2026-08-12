@@ -10,6 +10,8 @@ dangerous duplicate transfer.
 
 Built for the [KeeperHub Agents Onchain Hackathon](https://dorahacks.io/hackathon/agents-onchain/detail).
 
+**Judge console:** [keeperguard-agent.jiakunssocool.chatgpt.site](https://keeperguard-agent.jiakunssocool.chatgpt.site)
+
 ## Verified onchain proof
 
 - Network: Base Sepolia (`84532`)

@@ -57,4 +57,11 @@ https://sepolia.basescan.org/tx/0x2949e29d5aa0c5c84b1fb3331864db69ac6735335dde78
 
 - Source: https://github.com/ChunhuoQ/keeperguard
 - Demo: https://github.com/ChunhuoQ/keeperguard/releases/download/v0.1.0/keeperguard-demo.mp4
-- Live app: TO_BE_MADE_PUBLIC
+- Live app: https://keeperguard-agent.jiakunssocool.chatgpt.site
+
+## DoraHacks status
+
+- Submitted to **KeeperHub - Agents Onchain Hackathon** on 2026-08-12.
+- Current platform status: **under review**.
+- Track: **Build with Agents Onchain**.
+- Bounty attached: **Best Onboarding UX Improvement**.
