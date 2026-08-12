@@ -1,0 +1,11 @@
+Agents can detect onchain risk, but the dangerous part is what happens next. One bad signal can move funds, and one blind retry can move them twice.
+
+KeeperGuard turns treasury defense into four explicit gates. First, evidence must be fresh, domain-independent, and include an official source. A dramatic six-percent rumor from one unverified feed is rejected. Three independent signals confirm a median price of ninety-seven point one cents.
+
+Second, deterministic policy bounds the asset, deviation threshold, chain, recipient, and amount. The model cannot override those limits.
+
+Third, KeeperGuard persists the exact intent before KeeperHub simulates it. The unchanged body is broadcast once with an intent-derived idempotency key. An ambiguous receipt stops the agent; it never rotates the key and guesses.
+
+Finally, success means proof: completed, verified true, receipt status success, and the same hash confirmed through an independent Base Sepolia RPC.
+
+This is the real KeeperHub-sponsored transaction. KeeperGuard makes the last mile auditable: evidence becomes policy, policy becomes execution, and execution becomes proof.

@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+data/*.json
+data/*.jsonl
+!data/.gitkeep
+demo-video/build_video
+demo-video/narration.aiff
+demo-video/slides/
+demo-video/output/*
+!demo-video/output/keeperguard-demo.mp4
+*.log
+.DS_Store

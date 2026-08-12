@@ -1,0 +1,31 @@
+{
+  "name": "keeperguard-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Evidence-gated autonomous treasury incident response through KeeperHub.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "demo": "tsx src/cli.ts demo",
+    "preflight": "tsx src/cli.ts preflight",
+    "wallet:init": "tsx src/cli.ts wallet-init",
+    "keeperhub:onboard": "tsx src/cli.ts onboard",
+    "proof": "tsx src/cli.ts proof"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "viem": "^2.33.3",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "tsx": "^4.20.3",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}
