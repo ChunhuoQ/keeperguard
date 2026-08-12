@@ -1,0 +1,63 @@
+{
+  "incidentId": "keeperguard-proof-2026-08-12T09:46",
+  "assessment": {
+    "confirmed": true,
+    "medianPriceUsd": 0.971,
+    "deviationBps": 290,
+    "independentSources": 3,
+    "officialSources": 2,
+    "accepted": [
+      {
+        "id": "oracle-1",
+        "source": "Protocol Oracle",
+        "domain": "oracle.example",
+        "official": true,
+        "observedAt": "2026-08-12T09:46:01.716Z",
+        "asset": "USDX",
+        "priceUsd": 0.972,
+        "kind": "oracle"
+      },
+      {
+        "id": "dex-1",
+        "source": "Independent DEX TWAP",
+        "domain": "dex.example",
+        "official": false,
+        "observedAt": "2026-08-12T09:46:01.716Z",
+        "asset": "USDX",
+        "priceUsd": 0.968,
+        "kind": "dex"
+      },
+      {
+        "id": "risk-1",
+        "source": "Risk Council",
+        "domain": "risk.example",
+        "official": true,
+        "observedAt": "2026-08-12T09:46:01.716Z",
+        "asset": "USDX",
+        "priceUsd": 0.971,
+        "kind": "risk-feed"
+      }
+    ],
+    "rejected": [],
+    "reasons": []
+  },
+  "decision": {
+    "approved": true,
+    "action": "escape-transfer",
+    "amount": "0",
+    "riskScore": 100,
+    "reason": "3 independent sources confirmed 290 bps deviation"
+  },
+  "proof": {
+    "executionId": "xkcwcmw7ynga2mo28z7rf",
+    "status": "completed",
+    "transactionHash": "0x66446f82f1bc62733e7694363b8c3f89f294e829b07ffbdd7e097f0a24778a2a",
+    "transactionLink": "https://sepolia.basescan.org/tx/0x66446f82f1bc62733e7694363b8c3f89f294e829b07ffbdd7e097f0a24778a2a",
+    "verified": true,
+    "receiptStatus": "success",
+    "blockNumber": 45379847,
+    "gasUsed": "80521",
+    "sponsored": true,
+    "independentlyVerified": true
+  }
+}

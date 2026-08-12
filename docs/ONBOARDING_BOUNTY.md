@@ -34,6 +34,36 @@ This is directly reusable as a starter template for autonomous agents and CI run
 new builder from an empty directory to a real KeeperHub transaction without requesting testnet
 funds, exposing a private key, or teaching unsafe retry semantics.
 
+## Reproducible outcome
+
+The starter path was run from a new local identity against the production KeeperHub API on
+2026-08-12. It provisioned a distinct organization wallet and completed a sponsored Base
+Sepolia proof without faucet funds:
+
+- Login identity: `0x6c601055152797bfec022805239f2767Cd079db1`
+- Organization wallet: `0x9257137065e06b28925314f18a1ec6d9cab9d34d`
+- Direct-execution ID: `xkcwcmw7ynga2mo28z7rf`
+- Verified transaction: [`0x66446f…78a2a`](https://sepolia.basescan.org/tx/0x66446f82f1bc62733e7694363b8c3f89f294e829b07ffbdd7e097f0a24778a2a)
+- Receipt: `completed`, `verified: true`, `receiptStatus: success`
+- Independent Base Sepolia RPC check: passed
+
+The full public result is stored in `data/live-proof.json`. No private key, API key, session
+cookie, or signature is included.
+
+## Before and after
+
+| Builder task | Manual path | KeeperGuard starter |
+|---|---|---|
+| Create a safe identity | Choose tooling and protect a key manually | One command; ignored mode-0600 file |
+| Understand wallet roles | Easy to confuse login and execution wallets | Both public addresses are named separately |
+| Obtain programmatic auth | Dashboard navigation and one-time key copy | SIWE step-up handled and secret stored once |
+| Fund the first test | Find a faucet and wait | Not required for the zero-value proof |
+| Decide whether execution succeeded | Interpret `202`, poll status, inspect receipt | One command enforces all completion checks |
+| Avoid a duplicate after uncertainty | Builder-specific retry logic | Stable intent-bound idempotency by default |
+
+The improvement is therefore not merely fewer clicks. It installs the correct reliability
+semantics at the moment a new builder is most likely to copy an unsafe example into an agent.
+
 ## Suggested upstream improvements
 
 - Add a first-class `kh onboard --headless` command that wraps SIWE, key creation, and wallet wait.

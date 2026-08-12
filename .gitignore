@@ -4,6 +4,8 @@ dist/
 data/*.json
 data/*.jsonl
 !data/.gitkeep
+!data/live-proof.json
+!data/workflow-proof.json
 demo-video/build_video
 demo-video/narration.aiff
 demo-video/slides/

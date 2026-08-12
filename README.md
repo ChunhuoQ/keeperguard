@@ -130,6 +130,7 @@ KeeperHub organization wallet, configure a policy amount, review the recipient, 
 - `src/keeperhub.ts` — simulation, idempotent broadcast, receipt polling, RPC verification.
 - `src/agent.ts` — end-to-end incident lifecycle.
 - `workflows/keeperguard-emergency.json` — importable KeeperHub Workflow with an on-platform policy gate.
+- `data/workflow-proof.json` — public machine-readable proof for both Workflow branches.
 - `site/` — deployable interactive judge console.
 - `docs/` — architecture, submission copy, pitch, and onboarding teardown.
 - `test/` — evidence, policy, persistence/order, and KeeperHub adapter tests.

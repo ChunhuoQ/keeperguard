@@ -1,0 +1,31 @@
+{
+  "network": {
+    "name": "Base Sepolia",
+    "chainId": 84532
+  },
+  "workflow": {
+    "id": "tg0nwoz9j4v8wbtnkdrbv",
+    "definition": "workflows/keeperguard-emergency.json",
+    "path": "Manual Incident -> Condition (riskScore >= 80) -> Escape Transfer"
+  },
+  "rejectedCase": {
+    "riskScore": 60,
+    "executionId": "dk0z2ywwpdacc9czz44qf",
+    "status": "success",
+    "transactionHashes": [],
+    "expectedOutcome": "Condition false; no onchain action"
+  },
+  "approvedCase": {
+    "riskScore": 100,
+    "executionId": "pl2mb4yxbktlgb7egmsd3",
+    "status": "success",
+    "verified": true,
+    "receiptStatus": "success",
+    "transactionHash": "0x2949e29d5aa0c5c84b1fb3331864db69ac6735335dde78ed90a33d3a32287c15",
+    "transactionLink": "https://sepolia.basescan.org/tx/0x2949e29d5aa0c5c84b1fb3331864db69ac6735335dde78ed90a33d3a32287c15",
+    "blockNumber": 45380316,
+    "gasUsed": "40933",
+    "sponsored": true,
+    "independentlyVerified": true
+  }
+}
