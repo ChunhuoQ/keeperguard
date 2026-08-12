@@ -33,6 +33,11 @@ KeeperGuard uses KeeperHub's Direct Execution surface because the emergency acti
 at incident time. The same reliability contract can be deployed as a scheduled or event-triggered
 KeeperHub Workflow once the data feeds and production treasury policy are configured.
 
+The hackathon deployment also includes Workflow `tg0nwoz9j4v8wbtnkdrbv`: Manual Incident trigger
+→ KeeperHub Condition (`riskScore >= 80`) → Base Sepolia Escape Transfer. A rejected run
+(`dk0z2ywwpdacc9czz44qf`) produced no transaction; the approved run
+(`pl2mb4yxbktlgb7egmsd3`) produced a verified successful receipt.
+
 - `/api/chains` for enabled-chain preflight.
 - `/api/execute/transfer` with `simulate: true`.
 - `/api/execute/transfer` with a stable `Idempotency-Key`.

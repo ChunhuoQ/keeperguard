@@ -71,13 +71,13 @@ def proof():
     im = Image.new("RGB", (W, H), PAPER); d = ImageDraw.Draw(im); header(d, "REAL ONCHAIN PROOF", 5)
     d.text((54, 104), "A HASH IS NOT ENOUGH.", font=font(62), fill=INK)
     d.text((54, 178), "THE RECEIPT MUST VERIFY.", font=font(62), fill=INK)
-    fields = [("NETWORK", "BASE SEPOLIA · 84532"), ("STATUS", "COMPLETED"), ("RECEIPT", "SUCCESS · VERIFIED TRUE"), ("BLOCK", "45,379,847"), ("GAS", "80,521 · SPONSORED")]
+    fields = [("NETWORK", "BASE SEPOLIA · 84532"), ("WORKFLOW", "POLICY GATE → ESCAPE TRANSFER"), ("RECEIPT", "SUCCESS · VERIFIED TRUE"), ("BLOCK", "45,380,316"), ("GAS", "40,933 · SPONSORED")]
     y = 310
     for key, value in fields:
         d.text((62, y), key, font=font(15, True), fill=MUTED)
         d.text((420, y - 4), value, font=font(24, True), fill=INK)
         d.line((54, y + 42, 1220, y + 42), fill="#c8c8bf", width=1); y += 62
-    d.text((62, 635), "0x66446f82f1bc…0a24778a2a", font=font(20, True), fill="#397d36")
+    d.text((62, 635), "0x2949e29d5aa0…3d3a32287c15", font=font(20, True), fill="#397d36")
     save(im, 5)
 
 def close():

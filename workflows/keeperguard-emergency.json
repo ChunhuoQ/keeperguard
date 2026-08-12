@@ -1,0 +1,43 @@
+{
+  "name": "KeeperGuard Emergency Response",
+  "description": "Evidence-gated treasury response. The agent supplies a policy-approved risk score; only scores at or above 80 reach the onchain action.",
+  "enabled": false,
+  "nodes": [
+    {
+      "id": "incident",
+      "type": "trigger",
+      "data": {
+        "label": "Incident",
+        "config": { "triggerType": "Manual" }
+      }
+    },
+    {
+      "id": "policy-gate",
+      "type": "action",
+      "data": {
+        "label": "Policy Gate",
+        "config": {
+          "actionType": "Condition",
+          "condition": "{{@incident:Incident.riskScore}} >= 80"
+        }
+      }
+    },
+    {
+      "id": "escape-transfer",
+      "type": "action",
+      "data": {
+        "label": "Escape Transfer",
+        "config": {
+          "actionType": "web3/transfer-funds",
+          "network": "84532",
+          "amount": "0",
+          "recipientAddress": "0x9257137065e06b28925314f18a1ec6d9cab9d34d"
+        }
+      }
+    }
+  ],
+  "edges": [
+    { "id": "incident-to-policy", "source": "incident", "target": "policy-gate" },
+    { "id": "policy-to-transfer", "source": "policy-gate", "target": "escape-transfer", "sourceHandle": "true" }
+  ]
+}

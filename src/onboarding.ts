@@ -28,7 +28,7 @@ async function readEnvFile(file: string): Promise<Map<string, string>> {
 async function saveEnvFile(file: string, values: Map<string, string>): Promise<void> {
   const orderedKeys = [
     "ETH_PRIVATE_KEY", "KEEPERHUB_API_KEY", "KEEPERHUB_BASE_URL", "KEEPERHUB_CHAIN_ID",
-    "BASE_SEPOLIA_RPC_URL", "LIVE_EXECUTION", "PORT", "DATA_DIR",
+    "BASE_SEPOLIA_RPC_URL", "LIVE_EXECUTION", "KEEPERGUARD_ACTION_AMOUNT", "PORT", "DATA_DIR",
   ];
   const lines = orderedKeys.map((key) => `${key}=${values.get(key) ?? ""}`);
   await writeFile(file, `${lines.join("\n")}\n`, { mode: 0o600 });
@@ -41,6 +41,7 @@ export async function initializeWallet(envFile = ".env"): Promise<string> {
   values.set("KEEPERHUB_CHAIN_ID", values.get("KEEPERHUB_CHAIN_ID") || "84532");
   values.set("BASE_SEPOLIA_RPC_URL", values.get("BASE_SEPOLIA_RPC_URL") || "https://sepolia.base.org");
   values.set("LIVE_EXECUTION", values.get("LIVE_EXECUTION") || "false");
+  values.set("KEEPERGUARD_ACTION_AMOUNT", values.get("KEEPERGUARD_ACTION_AMOUNT") || "0");
   values.set("PORT", values.get("PORT") || "4173");
   values.set("DATA_DIR", values.get("DATA_DIR") || "./data");
   await saveEnvFile(envFile, values);

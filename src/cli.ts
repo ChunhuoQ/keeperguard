@@ -31,7 +31,11 @@ if (command === "wallet-init") {
   const proof = await agent.run(
     incidentId,
     confirmedSignals(),
-    { ...demoPolicy(result.organizationWallet as `0x${string}`), chainId: config.KEEPERHUB_CHAIN_ID },
+    {
+      ...demoPolicy(result.organizationWallet as `0x${string}`),
+      chainId: config.KEEPERHUB_CHAIN_ID,
+      maxActionAmount: config.KEEPERGUARD_ACTION_AMOUNT,
+    },
     config.LIVE_EXECUTION === "true",
   );
   await writeFile(`${config.DATA_DIR}/live-proof.json`, `${JSON.stringify(proof, null, 2)}\n`, { mode: 0o600 });

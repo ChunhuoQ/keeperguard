@@ -130,9 +130,10 @@ export default function Home() {
               <div><dt>Status</dt><dd>completed</dd></div>
               <div><dt>Receipt</dt><dd>success · verified: true</dd></div>
               <div><dt>Idempotency</dt><dd>intent-derived SHA-256</dd></div>
-              <div><dt>Block</dt><dd>45,379,847</dd></div>
-              <div><dt>Gas</dt><dd>80,521 · KeeperHub sponsored</dd></div>
-              <div><dt>Transaction</dt><dd><a className="proofLink" href="https://sepolia.basescan.org/tx/0x66446f82f1bc62733e7694363b8c3f89f294e829b07ffbdd7e097f0a24778a2a" target="_blank" rel="noreferrer">0x66446f…778a2a ↗</a></dd></div>
+              <div><dt>Workflow</dt><dd>tg0nwoz9…kdrbv</dd></div>
+              <div><dt>Block</dt><dd>45,380,316</dd></div>
+              <div><dt>Gas</dt><dd>40,933 · KeeperHub sponsored</dd></div>
+              <div><dt>Transaction</dt><dd><a className="proofLink" href="https://sepolia.basescan.org/tx/0x2949e29d5aa0c5c84b1fb3331864db69ac6735335dde78ed90a33d3a32287c15" target="_blank" rel="noreferrer">0x2949e2…287c15 ↗</a></dd></div>
             </dl>
           </article>
         </div>
